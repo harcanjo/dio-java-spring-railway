@@ -11,3 +11,5 @@ public class Application {
 	}
 
 }
+
+// Mapeando as Entidades e Criando o Perfil DEV

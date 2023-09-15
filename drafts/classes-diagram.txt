@@ -1,55 +1,35 @@
 classDiagram
   class User {
-    -name: String
-    -account: Account
-    -features: Feature[]
-    -card: Card
-    -news: News[]
-
-    +getName(): String
-    +getAccount(): Account
-    +getFeatures(): Feature[]
-    +getCard(): Card
-    +getNews(): News[]
+    -String name
+    -Account account
+    -Feature[] features
+    -Card card
+    -News[] news
   }
 
   class Account {
-    -number: String
-    -agency: String
-    -balance: Float
-    -limit: Float
-
-    +getNumber(): String
-    +getAgency(): String
-    +getBalance(): Float
-    +getLimit(): Float
+    -String number
+    -String agency
+    -Number balance
+    -Number limit
   }
 
   class Feature {
-    -icon: String
-    -description: String
-
-    +getIcon(): String
-    +getDescription(): String
+    -String icon
+    -String description
   }
 
   class Card {
-    -number: String
-    -limit: Float
-
-    +getNumber(): String
-    +getLimit(): Float
+    -String number
+    -Number limit
   }
 
   class News {
-    -icon: String
-    -description: String
-
-    +getIcon(): String
-    +getDescription(): String
+    -String icon
+    -String description
   }
 
-  User -- Account : has
-  User -- Feature : has
-  User -- Card : has
-  User -- News : has
+  User "1" *-- "1" Account
+  User "1" *-- "N" Feature
+  User "1" *-- "1" Card
+  User "1" *-- "N" News
