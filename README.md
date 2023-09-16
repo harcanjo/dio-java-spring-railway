@@ -56,19 +56,21 @@ classDiagram
 ```
 
 ## Notas
-- JSON Editor Online: Para organizar a abstração do layout (ex: Figma) em possíveis entidades.
+- [JSON Editor Online](https://jsoneditoronline.org/): Para organizar a abstração do layout (ex: Figma) em possíveis entidades.
   - Arquivo: "./drafts/layout-to-abstraction.json"
-- ChatGPT: Pegar o .json criado e gerar um diagrama de classes (UML) para o projeto.
+- [ChatGPT](https://chat.openai.com/): Pegar o .json criado e gerar um diagrama de classes (UML) para o projeto.
   - Prompt: "Gere um diagrama de classes (usando a sintaxe Mermaid) tendo em vista o seguinte JSON que representa um usuário de um banco. Mantenha o idioma das classes em inglês. Mantenha uma estrutura simples e fiel ao modelo que vou passar: [Cole o conteúdo criado no JSON] ."
   - Arquivo: "./drafts/classes-diagram.txt"
-- OpenAPI Swagger - [https://github.com/springdoc/springdoc-openapi](https://github.com/springdoc/springdoc-openapi)
+- [OpenAPI Swagger](https://github.com/springdoc/springdoc-openapi): [https://github.com/springdoc/springdoc-openapi](https://github.com/springdoc/springdoc-openapi)
 
-## Tomcat
+## Local Server (Tomcat)
 - API - localhost:8080 
 - H2 web interface - localhost:8080/h2-console 
 - Swagger - localhost:8080/swagger-ui.html
 
-
-
-
-
+## Production Server (Railway)
+- [Railway](https://railway.app/): [https://railway.app/](https://railway.app/)
+- GitHub Integrado do Repositorio para Deploy
+- Atualmente fornece $5 dólares mensais para teste dos serviços no Trial Plan
+- Deploy:
+  - New Project -> Postgres -> criar novo application.yml com as configurações de produção com as config. do banco -> Na IDE, criar perfil de execução com Environment variables -> Na primeira execução, nas config do jpa, deixe o ddl-auto: create -> Execute em modo de produção -> Verifique a execução no console, veja se rodou corretamente, se tive alguns logs de skip, podem significar a criação das tabelas no banco, verifique no dashboard do railway, na aba de Data, as tabelas devem estar listadas -> Pare a execução e volte o valor para a ddl-auto: validate -> Execute novamente em modo de produção, desta vez teremos muito menos warnings -> No Swagger UI crie novos registros -> Agora os dados devem estar persistidos no banco de produção.
