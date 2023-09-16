@@ -64,9 +64,9 @@ classDiagram
 - OpenAPI Swagger - [https://github.com/springdoc/springdoc-openapi](https://github.com/springdoc/springdoc-openapi)
 
 ## Tomcat
-- localhost:8080 - API
-- localhost:8080/h2-console - H2 web interface
-- localhost:8080/swagger-ui.html - Swagger
+- API - localhost:8080 
+- H2 web interface - localhost:8080/h2-console 
+- Swagger - localhost:8080/swagger-ui.html
 
 
 
