@@ -78,6 +78,7 @@ classDiagram
     - build.gradle: para add a Classe principal
     - criar o Procfile: para gerar o jar da build: "web: java -jar  build/libs/santander-dev-week-2023-0.0.1-SNAPSHOT.jar"
     - gradle-wrapper.properties: coloque uma versão do gradle suportada pelo railway, altere a versão no distributionUrl ex: "distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.1-bin.zip"
+  - New -> GitHub Repo -> Seleciona o repo -> ele começa o deploy automatico, buildando com o gradle especificado -> Settings, ele vai fazer o deploy automatico na branch selectionada, pode remover private network, criar um dominio publico, é possivel ver os logs da build -> Shared Variables: production: SPRING_PROFILES_ACTIVE prd Add -> Na dashboard principal do app do git repo, na aba Variables, Copiar as environment variables da IDE para o RAW Editor, não precisa add o SPRING_PROFILES_ACTIVE novamente, mas precisa colocar a PORT=8080, update variables -> se a build correr nomalmente, pode acessar o dominio/swagger-ui.html -> verifique se o CORS está configurado.
 
 
 
