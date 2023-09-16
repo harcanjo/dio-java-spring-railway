@@ -13,6 +13,7 @@
  - **Railway**: facilita o deploy e monitoramento de nossas soluções na nuvem, além de oferecer diversos bancos de dados como serviço e pipelines de CI/CD.
 
 ## Layout
+**Não Implementado Ainda**
 ![Layout da aplicação web](./drafts/screenshots/layout-web.png)
 ### [Link do Figma](https://www.figma.com/file/0ZsjwjsYlYd3timxqMWlbj/SANTANDER---Projeto-Web%2FMobile?type=design&node-id=1421-432&mode=design)
 
@@ -82,4 +83,8 @@ classDiagram
 
 
 
+## Repositório Oficial da DIO
 
+[https://github.com/digitalinnovationone/santander-dev-week-2023-api](https://github.com/digitalinnovationone/santander-dev-week-2023-api)
+
+Esse repositório possui endpoints de CRUD, além de aplicar boas práticas (uso de DTOs e refinamento na documentação da OpenAPI).
