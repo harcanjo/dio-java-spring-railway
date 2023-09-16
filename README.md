@@ -61,7 +61,12 @@ classDiagram
 - ChatGPT: Pegar o .json criado e gerar um diagrama de classes (UML) para o projeto.
   - Prompt: "Gere um diagrama de classes (usando a sintaxe Mermaid) tendo em vista o seguinte JSON que representa um usuário de um banco. Mantenha o idioma das classes em inglês. Mantenha uma estrutura simples e fiel ao modelo que vou passar: [Cole o conteúdo criado no JSON] ."
   - Arquivo: "./drafts/classes-diagram.txt"
+- OpenAPI Swagger - [https://github.com/springdoc/springdoc-openapi](https://github.com/springdoc/springdoc-openapi)
 
+## Tomcat
+- localhost:8080 - API
+- localhost:8080/h2-console - H2 web interface
+- localhost:8080/swagger-ui.html - Swagger
 
 
 

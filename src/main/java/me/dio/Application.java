@@ -12,4 +12,4 @@ public class Application {
 
 }
 
-// Hotfix 'precision' e 'scale'
+// 
