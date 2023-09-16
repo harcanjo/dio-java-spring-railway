@@ -74,3 +74,11 @@ classDiagram
 - Atualmente fornece $5 dólares mensais para teste dos serviços no Trial Plan
 - Deploy:
   - New Project -> Postgres -> criar novo application.yml com as configurações de produção com as config. do banco -> Na IDE, criar perfil de execução com Environment variables -> Na primeira execução, nas config do jpa, deixe o ddl-auto: create -> Execute em modo de produção -> Verifique a execução no console, veja se rodou corretamente, se tive alguns logs de skip, podem significar a criação das tabelas no banco, verifique no dashboard do railway, na aba de Data, as tabelas devem estar listadas -> Pare a execução e volte o valor para a ddl-auto: validate -> Execute novamente em modo de produção, desta vez teremos muito menos warnings -> No Swagger UI crie novos registros -> Agora os dados devem estar persistidos no banco de produção.
+  - Para deploy da aplicação prepare os arquivos:
+    - build.gradle: para add a Classe principal
+    - criar o Procfile: para gerar o jar da build: "web: java -jar  build/libs/santander-dev-week-2023-0.0.1-SNAPSHOT.jar"
+    - gradle-wrapper.properties: coloque uma versão do gradle suportada pelo railway, altere a versão no distributionUrl ex: "distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.1-bin.zip"
+
+
+
+

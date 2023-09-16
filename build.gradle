@@ -27,6 +27,13 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+// To prd deploy
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "me.dio.Application"		
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
